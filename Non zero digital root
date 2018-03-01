@@ -1,3 +1,5 @@
+//for https://codegolf.stackexchange.com/questions/153277/the-non-zero-digital-product-challenge
+
 static int x(int y)
         {
             var z = y.ToString();
