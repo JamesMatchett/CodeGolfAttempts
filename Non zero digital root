@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace golf
+{
+    class Program
+    {
+        //for https://codegolf.stackexchange.com/questions/153277/the-non-zero-digital-product-challenge
+        static void Main(string[] args)
+        {
+        }
+
+        int x(int y){
+            int r = 0;
+            string z = y.ToString();
+            for (int i = 1; i < z.Length;i++)
+            {
+                if (z[i + 1] == 0)
+                {
+                    r *= 1;
+                }
+                r *= z[i + 1];
+            }
+            return r;
+        }
+    }
+}
