@@ -1,33 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace golf
-{
-    class Program
-    {
-        //for https://codegolf.stackexchange.com/questions/153277/the-non-zero-digital-product-challenge
-        static void Main(string[] args)
+static int x(int y)
         {
-            Console.WriteLine((361218402));
-           Console.ReadLine();
-        }
-
-       static int x(int y){
-            string z = y.ToString();
-            int r = z[0];
-            
-            for (int i = 1; i < z.Length;i++)
+            var z = y.ToString();
+            int r = z[0]-48;
+            for (int i = 1; i < z.Length; i++)
             {
-                if (z[i] == 0)
+                if (z[i] != 48)
                 {
-                    r *= 1;
+                    r *= z[i]-48;
                 }
-                r *= z[i];
             }
             return r;
         }
-    }
-}
